@@ -12,12 +12,13 @@ const SportSchema = new Schema({
     eventDate:{
         type:Date
     },
+    eventLocation:{
+        type:String
+    },
     attending:{
         type:Boolean
     },
-    location:{
-        type:String
-    }
+    
 
     
 });

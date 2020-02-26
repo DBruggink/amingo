@@ -15,6 +15,7 @@ const express = require('express');  // this line looks through package and uplo
 const app = express(); // invoking the function of express, turns app into and object with all the express functions
 const bodyParser = require('body-parser'); // making body parser library functional
 const mongoose = require('mongoose'); // Uploading mongoose
+const cors = require('cors');
 
 //import models for db operations
 const UserModel = require('./models/User');
@@ -29,6 +30,7 @@ const FeedRoutes = require('./routes/Feed');
 // configure express to parse the BODY
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
+app.use(cors())
 
 const dbUrl = "mongodb+srv://admin:Dtedtedte123@cluster0-sw0ps.mongodb.net/test?retryWrites=true&w=majority" // Connection url to the database
 mongoose.connect(
