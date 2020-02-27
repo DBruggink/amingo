@@ -5,14 +5,11 @@ const mongoose = require('mongoose'); // this will upload the mongoose package
 const Schema = mongoose.Schema;  // this invokes the mongoose package into the app 
 
 const UserSchema = new Schema({
-    firstname:{
+    fullname:{
         type:String,
         required:true
      },
-     lastname:{
-         type:String,
-         required:true
-     },
+   
      email:{
          type:String,
          required:true
@@ -27,12 +24,10 @@ const UserSchema = new Schema({
      sports:{
         type: Array
      },
-     university:{
-        type:String
-     },
-     graduation:{
-        type:Date
-     },
+     bio:{
+      type: String,
+      required:true
+   },
      occupation:{
         type:String
      },

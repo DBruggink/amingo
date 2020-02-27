@@ -17,7 +17,10 @@ router.post('/create',
                 'description': req.body.description,
                 'hashtags': req.body.hashtags,          
                 'image': req.body.image,           
-                'likes': req.body.likes,           
+                'likes': req.body.likes,
+                'fullname' : req.body.fullname,
+                'date': req.body.date,
+                'emirate': req.body.emirate           
                                       
             }
             const theFeed=new FeedModel(formdata);

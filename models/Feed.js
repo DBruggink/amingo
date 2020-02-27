@@ -3,7 +3,7 @@ const mongoose = require('mongoose'); // this will upload the mongoose package
 const Schema = mongoose.Schema;  // this invokes the mongoose package into the app
 
 const FeedSchema = new Schema({
-    comments:{
+    fullname:{
         type:String
     },
     description:{
@@ -19,6 +19,9 @@ const FeedSchema = new Schema({
     likes:{
         types: Number,
         default: 0
+    },
+    emirate:{
+        types: String,   
     },
     date:{
         type: Date,

@@ -16,10 +16,12 @@ const UserModel=require('../models/User')
 router.post('/register',
         (req,res)=>{
             const formdata={
-                'firstname': req.body.firstname,          
-                'lastname': req.body.lastname,           
+                'fullname': req.body.fullname,          
+                'age': req.body.age,          
                 'email': req.body.email,           
-                'password': req.body.password,           
+                'password': req.body.password,  
+                'sports': req.body.sports,  
+                'bio': req.body.bio,       
                 'occupation': req.body.occupation            
             }
             const theUser=new UserModel(formdata);
