@@ -17,11 +17,11 @@ const FeedSchema = new Schema({
         type: String
     },
     likes:{
-        types: Number,
+        type: Number,
         default: 0
     },
     emirate:{
-        types: String,   
+        type: String,   
     },
     date:{
         type: Date,

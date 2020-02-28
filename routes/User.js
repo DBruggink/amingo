@@ -22,7 +22,8 @@ router.post('/register',
                 'password': req.body.password,  
                 'sports': req.body.sports,  
                 'bio': req.body.bio,       
-                'occupation': req.body.occupation            
+                'occupation': req.body.occupation,
+                'image': req.body.image            
             }
             const theUser=new UserModel(formdata);
 
