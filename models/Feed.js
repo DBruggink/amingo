@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;  // this invokes the mongoose package into the a
 
 const FeedSchema = new Schema({
     fullname:{
-        type:String
+        type:String,
+        required:false
     },
     description:{
         type:String,
@@ -12,16 +13,20 @@ const FeedSchema = new Schema({
     },
     hashtags:{
       type: Array,
+        required:false
     },
     image:{
-        type: String
+        type: String,
+        required:false
     },
     likes:{
         type: Number,
-        default: 0
+        default: 0,
+        required:false
     },
     emirate:{
-        type: String,   
+        type: String,
+        required:false  
     },
     date:{
         type: Date,
