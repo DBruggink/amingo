@@ -26,13 +26,15 @@ const FeedModel = require('./models/Feed');
 //imoort routes
 const FeedRoutes = require('./routes/Feed');
 
+const keys=require('./config/keys'); // keys work or keys production depending on the environment (local or deployed ie heroku)
+
 
 // configure express to parse the BODY
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 app.use(cors())
 
-const dbUrl = 'mongodb+srv://admin:Dtedtedte123@cluster0-sw0ps.mongodb.net/test?retryWrites=true&w=majorityrs'
+const dbUrl = keys.DB_URL;
 ;// Connection url to the database
 mongoose.connect(
     dbUrl,
@@ -120,7 +122,8 @@ app.get('*',             //new page ( * means everything, for example, everythin
 
 
 
-app.listen(                    //.listen also takes the same parameters as above. Port number and a function
+app.listen( 
+    process.env.PORT ||                   //.listen also takes the same parameters as above. Port number and a function
     3010, // connect to this port
     ()=>{
         console.log('you are connected') // do this when connected
